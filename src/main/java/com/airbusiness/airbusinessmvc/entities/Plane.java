@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class Plane {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	@NotBlank(message = "Type is mandatory")
