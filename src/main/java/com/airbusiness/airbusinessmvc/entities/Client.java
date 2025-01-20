@@ -1,27 +1,30 @@
 package com.airbusiness.airbusinessmvc.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
 
 @Entity
+@Data
+//@Table(name="client")
 public class Client {
-    @Id
+   @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @NotBlank(message = "First Name is mandatory")
+   @NotBlank(message = "First Name is mandatory")
     private String firstName;
 
-    @NotBlank(message = "Last Name is mandatory")
+    @NotBlank(message = "Last Name is mandatory") 
     private String lastName;
     
     private String address;
     private String telephone;
     private double outstandingBalance;
-
+/*
     public void setId(long id) {
         this.id = id;
     }
@@ -68,5 +71,5 @@ public class Client {
     
     public void setOutstandingBalance(double outstandingBalance) {
     	this.outstandingBalance = outstandingBalance;
-    }
+    }*/
 }
