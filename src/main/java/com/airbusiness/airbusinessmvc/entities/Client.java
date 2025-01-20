@@ -1,23 +1,26 @@
 package com.airbusiness.airbusinessmvc.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Entity
 @Data
+//@Table(name="client")
 public class Client {
    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @NotBlank(message = "First Name is mandatory")
+   @NotBlank(message = "First Name is mandatory")
     private String firstName;
 
-    @NotBlank(message = "Last Name is mandatory")
+    @NotBlank(message = "Last Name is mandatory") 
     private String lastName;
     
     private String address;
