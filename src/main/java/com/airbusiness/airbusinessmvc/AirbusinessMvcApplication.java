@@ -1,4 +1,4 @@
-package com.airbusiness.airbusiness_mvc;
+package com.airbusiness.airbusinessmvc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
