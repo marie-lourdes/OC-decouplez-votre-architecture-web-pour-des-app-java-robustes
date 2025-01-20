@@ -5,10 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
 
 @Entity
+@Data
 public class Client {
-    @Id
+   @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
@@ -21,7 +23,7 @@ public class Client {
     private String address;
     private String telephone;
     private double outstandingBalance;
-
+/*
     public void setId(long id) {
         this.id = id;
     }
@@ -68,5 +70,5 @@ public class Client {
     
     public void setOutstandingBalance(double outstandingBalance) {
     	this.outstandingBalance = outstandingBalance;
-    }
+    }*/
 }

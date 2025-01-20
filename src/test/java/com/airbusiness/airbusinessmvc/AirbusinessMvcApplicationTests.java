@@ -1,4 +1,4 @@
-package com.airbusiness.airbusiness_mvc;
+package com.airbusiness.airbusinessmvc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
