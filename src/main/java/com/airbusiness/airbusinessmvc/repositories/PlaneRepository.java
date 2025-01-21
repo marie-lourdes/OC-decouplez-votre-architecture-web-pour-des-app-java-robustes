@@ -6,5 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.airbusiness.airbusinessmvc.entities.Plane;
 
 @Repository
-public interface PlaneRepository extends CrudRepository<Plane, Long>  {
+public interface PlaneRepository  extends CrudRepository<Plane, Long> {
+
 }
+
