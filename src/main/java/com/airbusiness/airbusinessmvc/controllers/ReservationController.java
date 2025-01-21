@@ -1,7 +1,5 @@
 package com.airbusiness.airbusinessmvc.controllers;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.airbusiness.airbusinessmvc.entities.Reservation;
 import com.airbusiness.airbusinessmvc.repositories.ReservationRepository;
+
+import jakarta.validation.Valid;
 
 
 @Controller
@@ -60,11 +60,12 @@ public class ReservationController {
     }
     
     @GetMapping("/reservation/delete/{id}")
-    public String deleteReservation(@PathVariable("id") long id, Model model) {
+    public String deleteReservation(@PathVariable("id") long id) {
         Reservation reservation = reservationRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid reservation Id:" + id));
         reservationRepository.delete(reservation);
-        model.addAttribute("reservations", reservationRepository.findAll());
-        return "reservations";
+        //mieux vaut rediriger avec le lien GET /reservation , que recharger les données (addAttribute) du model reservations avec la donnée supprimé
+       // model.addAttribute("reservations", reservationRepository.findAll());
+        return "redirect:/reservations";
     }
     
  	@RequestMapping("/reservations")
