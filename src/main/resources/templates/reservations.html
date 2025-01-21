@@ -33,7 +33,7 @@
                             <tbody>
                                 <tr th:each="reservation : ${reservations}">
                                     <td th:text="${reservation.name}"></td>
-                                    <td th:text="${reservation.destination}"></td>
+                                    <td th:text="${reservation.destination}" ></td>
                                     <td th:text="${reservation.departureDate}"></td>
                                     <td th:text="${reservation.returnDate}"></td>
                                     <td><a th:href="@{/reservation/edit/{id}(id=${reservation.id})}" class="btn btn-primary"><i class="fas fa-calendar-minus ml-2"></i></a></td>

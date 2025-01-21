@@ -63,7 +63,7 @@ public class ReservationController {
     public String deleteReservation(@PathVariable("id") long id) {
         Reservation reservation = reservationRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid reservation Id:" + id));
         reservationRepository.delete(reservation);
-        //mieux vaut rediriger avec le lien GET /reservation , que recharger les données (addAttribute) du model reservations avec la donnée supprimé
+        /* **mieux vaut rediriger avec le lien GET /reservation , que recharger les données (addAttribute) du model reservations avec la donnée supprimé***/
        // model.addAttribute("reservations", reservationRepository.findAll());
         return "redirect:/reservations";
     }
