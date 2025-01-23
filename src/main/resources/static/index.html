@@ -12,9 +12,11 @@
           <img src="/images/AirBusinessLogo.jpg" height="64" width="64"/>
         </a>
         <p>Welcome to Air Business</p>
+        <!-- pages dynamiques , on garde juste le nom du fichier html qui sont des  templates que reconnait automatiquement thymeleaf sans l extension html
+        Cette page index est static donc avec  @{} de thymeleaf  le lien ne fonctionnera pas  car non dynamique-->
         <nav>
 		    <p>Choose from the following</p>
-			<p><a  href="reservations">Reservations</a></p>
+			<p><a href="reservations">Reservations</a></p>
 			<p><a href="clients">Clients</a></p>
 			<p><a href="maintenance">Pilots Submit Maintenance Request</a></p>
 			<p><a href="maintenance">Mechanics Update Maintenance Request</a></p>
