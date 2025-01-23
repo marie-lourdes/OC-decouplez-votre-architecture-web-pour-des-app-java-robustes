@@ -1,7 +1,5 @@
 package com.airbusiness.airbusinessmvc.controllers;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.airbusiness.airbusinessmvc.entities.Client;
 import com.airbusiness.airbusinessmvc.repositories.ClientRepository;
+
+import jakarta.validation.Valid;
 
 
 @Controller

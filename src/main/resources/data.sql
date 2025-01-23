@@ -4,7 +4,7 @@ first_name VARCHAR(100) ,
 last_name VARCHAR(100) ,
 address VARCHAR(150),
 telephone VARCHAR(100),
-outstanding_Balance float
+outstanding_Balance float NULL
 );
 
 INSERT INTO clients(first_name,last_name,address,telephone) VALUES ('hedh','hhjg','hjjj','hbhj');
