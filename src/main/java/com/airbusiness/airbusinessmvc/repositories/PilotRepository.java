@@ -9,3 +9,4 @@ import com.airbusiness.airbusinessmvc.entities.Pilot;
 @Repository
 public interface PilotRepository extends CrudRepository<Pilot, Long>  {
 }
+
