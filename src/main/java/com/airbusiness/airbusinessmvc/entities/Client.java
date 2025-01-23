@@ -24,7 +24,7 @@ public class Client {
     
     private String address;
     private String telephone;
-    private double outstandingBalance;
+    private Double outstandingBalance;
 /*
     public void setId(long id) {
         this.id = id;
