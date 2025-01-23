@@ -24,7 +24,7 @@ public class ReservationController {
     public ReservationController(ReservationRepository reservationRepository) {
         this.reservationRepository = reservationRepository;
     }
-	
+/* ********** test autres parametre avec le model dans la requet get et une instance vide de reservation et @Modelattribute dans le requete POST dans la creation d une reservation ****** */
     @GetMapping("/new-trip")
     public String showNewTripForm(Model model) {
     	Reservation reservation = new Reservation();
@@ -37,7 +37,7 @@ public class ReservationController {
         if (result.hasErrors()) {
             return "add-reservation";
         }
-        
+  /* ************************************** */      
         reservationRepository.save(reservation);
     //    model.addAttribute("reservations", reservationRepository.findAll());
         return "reservations";
