@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.airbusiness.airbusinessmvc.entities.Client;
 import com.airbusiness.airbusinessmvc.entities.Reservation;
 import com.airbusiness.airbusinessmvc.repositories.ReservationRepository;
 
@@ -19,13 +18,16 @@ import jakarta.validation.Valid;
 
 @Controller
 public class ReservationController {
+	/* en rendant le champs final et l injection dans le constuctor , aucune erreur mais l injection est sur le champ, le modificateur d acces Final cree une erreur demande l inititialisation */
+	
 	// @Autowired
-    private final ReservationRepository reservationRepository;
+	   private final ReservationRepository reservationRepository;
 
 	/* l injection du constructor avec reservation repository et non directement sur le champ , permet de tester le controller en creant correctement l instance repository lor d un test unitaire
 	 * d'autant plus si il plus instance et champs de classe a initialisé via le constructor , il est moins verbeux d injecter d irectement sur le constructor que sur plusieurs champs
 	 * si la classe n a qu un seul constructor , l autowired n est necessaire
 	 */
+    
     @Autowired
     public ReservationController(ReservationRepository reservationRepository) {
         this.reservationRepository = reservationRepository;
