@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,18 +26,20 @@ public class ReservationController {
     }
 	
     @GetMapping("/new-trip")
-    public String showNewTripForm(Reservation user) {
+    public String showNewTripForm(Model model) {
+    	Reservation reservation = new Reservation();
+    	model.addAttribute("reservation",reservation);
         return "add-reservation";
     }
     
     @PostMapping("/reservation/add")
-    public String addReservation(@Valid Reservation reservation, BindingResult result, Model model) {
+    public String addReservation(@Valid @ModelAttribute Reservation reservation, BindingResult result) {
         if (result.hasErrors()) {
             return "add-reservation";
         }
         
         reservationRepository.save(reservation);
-        model.addAttribute("reservations", reservationRepository.findAll());
+    //    model.addAttribute("reservations", reservationRepository.findAll());
         return "reservations";
     }
     

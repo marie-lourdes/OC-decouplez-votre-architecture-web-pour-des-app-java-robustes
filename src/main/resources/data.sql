@@ -17,4 +17,4 @@ departure_date VARCHAR(100),
 return_date VARCHAR(15) 
 );
 
-INSERT INTO reservations VALUES (1,'hedh','hhjg','hjjj','hbhj');
+/*INSERT INTO reservations VALUES (1,'hedh','hhjg','hjjj','hbhj');*/
