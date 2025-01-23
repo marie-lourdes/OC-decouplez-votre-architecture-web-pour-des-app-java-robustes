@@ -7,7 +7,7 @@ telephone VARCHAR(100),
 outstanding_Balance float NULL
 );
 
-INSERT INTO clients(first_name,last_name,address,telephone) VALUES ('hedh','hhjg','hjjj','hbhj');
+INSERT INTO clients(first_name,last_name,address,telephone) VALUES ('firstname client','lastname client','address client','telephone client');
 
 CREATE TABLE reservations( 
 id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
